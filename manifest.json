@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Bandcamp Media Player",
+  "description": "An extension to add Media Session API support to the Bandcamp player!",
+  "version": "1.0.0",
+  "icons": {
+    "16": "./img/app-16.png",
+    "48": "./img/app-48.png",
+    "128": "./img/app-128.png"
+  },
+  "host_permissions": [
+    "https://*.bandcamp.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.bandcamp.com/*"
+      ],
+      "js": [
+        "./dist/content.js"
+      ]
+    }
+  ]
+}
